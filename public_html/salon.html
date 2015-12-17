@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>StyleKaro</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/salon.css" rel="stylesheet">
+        <link href="css/common.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href="css/star-rating.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="overlay"></div>
+            <!--top Navbar-->
+            <nav class="navbar navbar-default customNavbar" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" style="padding: 0px;" href="#">
+                            <img alt="Stylekoro" src="img/logo.png" >
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav ">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle selectCityDD" data-toggle="dropdown">Select city <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Kolkata</a></li>
+                                    <li><a href="#">Delhi</a></li>
+                                    <li><a href="#">Mumbai</a></li>
+                                    <li><a href="#">Bangalore</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form" role="search">
+                            <div class="input-group" style="margin-left: 50px;">
+                                <input type="text" class="form-control pull-right searchForm" placeholder="Search">
+                                <span class="input-group-btn">
+                                    <button type="reset" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-remove">
+                                            <span class="sr-only">Close</span>
+                                        </span>
+                                    </button>
+                                    <button type="submit" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-search">
+                                            <span class="sr-only">Search</span>
+                                        </span>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+            <!--sidebar-->
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+                <ul class="nav sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a href="#">
+                            StyleKaro
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Salon</a>
+                    </li>
+                    <li>
+                        <a href="#">Offers</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="page-content-wrapper">
+                <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                    <span class="hamb-top"></span>
+                    <span class="hamb-middle"></span>
+                    <span class="hamb-bottom"></span>
+                </button>
+
+                <div class="container">
+                    <div class="row salonImageWrapper">
+                        <img src="img/salon1.jpg" alt="Salon1"/>
+                        <div class="salonImageOverlay">
+                            <div class="col-md-5 col-md-offset-7 col-lg-4 col-lg-offset-8 col-sm-6 col-sm-offset-6 col-xs-10 col-xs-offset-2 input-group salonImageBtnGroup">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default salonImageBtn"><i class="fa fa-share-alt" style="color:white"></i></button>
+                                    <button type="button" class="btn btn-default salonImageBtn"><i class="fa fa-heart" style="color:white"></i></button>
+                                    <button type="button" class="btn btn-default salonImageBtn" style="color:white;"><i class="fa fa-pencil-square-o" style="color:white"></i> Review</button>
+                                </div>
+                                <input id="inputRatingImage" class="rating" min="0" max="5" step="0.5" data-size="xs"
+                                       data-symbol="&#xf005;" data-glyphicon="false" data-rating-class="rating-fa" style="margin-left: 5px;">
+                            </div><!-- /input-group -->
+                            <div class="salonImageWidth">
+                                <div class="row salonImageRow">
+                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                        <p class="salonImageTitle">Salon1</p>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <span class="label label-success btnRating pull-right"><span class="labelMeanRating">4.2/</span>1217</span>
+                                    </div>
+                                </div>  
+                                <hr class="salonImageHR">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 salonInfoDiv">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="row contactInfo">
+                                        <p class="mainHeader">Phone number</p>
+                                        <ul class="list-group contactNumbers">
+                                            <li class="list-group-item contactItem">+91 9735036117</li>
+                                            <li class="list-group-item contactItem">+91 8100082528</li>
+                                        </ul>
+                                    </div>
+                                    <div class="row AdressInfo">
+                                        <p class="mainHeader">Address</p>
+                                        <p><a><b style="color:#2d2d2d">Russel Street</b></a> › 1st Floor, Sikkim House, 4/1, Middleton Row, Russel Street, Kolkata</p>
+                                        <p><a class="allAddress">See 3 more locations ></a></p>
+                                    </div>
+                                    <div class="row" id="salonMap">
+                                    </div>
+                                    <div class="row timingInfo short-text">
+                                        <div class="mainHeader" style="margin-bottom: 5px;">opening hours<span class="seemoreStyle" id="seemore">see more</span></div>
+                                        <div class="row openingHoursStyle">
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 zeroPadding">
+                                                Today
+                                            </div>
+                                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 zeroPadding">
+                                                12 Noon to 9:30 PM
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 zeroPadding">
+                                                <span class="label label-success">open</span>
+                                            </div>
+                                        </div>
+                                        <div class="row openingHoursStyle">
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 zeroPadding">
+                                                Mon
+                                            </div>
+                                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 zeroPadding">
+                                                12 Noon to 9:30 PM
+                                            </div>
+
+                                        </div>
+                                        <div class="row openingHoursStyle">
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 zeroPadding">
+                                                Tue
+                                            </div>
+                                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 zeroPadding">
+                                                12 Noon to 9:30 PM
+                                            </div>
+
+                                        </div>
+                                        <div class="row openingHoursStyle">
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 zeroPadding">
+                                                Wed
+                                            </div>
+                                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 zeroPadding">
+                                                12 Noon to 9:30 PM
+                                            </div>
+
+                                        </div>
+                                        <div class="row openingHoursStyle">
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 zeroPadding">
+                                                Thu
+                                            </div>
+                                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 zeroPadding">
+                                                12 Noon to 9:30 PM
+                                            </div>
+
+                                        </div>
+                                        <div class="row openingHoursStyle">
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 zeroPadding">
+                                                Fri
+                                            </div>
+                                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 zeroPadding">
+                                                12 Noon to 9:30 PM
+                                            </div>
+
+                                        </div>
+                                        <div class="row openingHoursStyle">
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 zeroPadding">
+                                                Sat
+                                            </div>
+                                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 zeroPadding">
+                                                12 Noon to 9:30 PM
+                                            </div>
+
+                                        </div>
+                                        <div class="row openingHoursStyle">
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 zeroPadding">
+                                                Sun
+                                            </div>
+                                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 zeroPadding">
+                                                12 Noon to 9:30 PM
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row facilitiesInfo">
+                                        <p class="mainHeader">uniqueness</p>
+                                        <ul style="list-style-image: url('img/yes.png')">
+                                            <li data-type="yes" class="facility">Unisex</li>
+                                            <li data-type="no" class="facility" style="list-style-image:url('img/no.png') ">Card Accepted</li>
+                                            <li data-type="yes" class="facility">Service Tex</li>
+                                            <li data-type="yes" class="facility">Parking</li>
+                                            <li data-type="yes" class="facility">AC</li>
+                                            <li data-type="yes" class="facility">Home Service</li>
+                                            <li data-type="yes" class="facility">Need Appointment</li>
+                                            <li data-type="yes" class="facility">Wi-Fi</li>
+                                            <li data-type="yes" class="facility">Bridal Makeup</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 mainMenu">
+                                    <div class="row serviceInfo">
+                                        <p class="mainHeader">Services offered</p>
+                                        <div class="panel-group" id="accordion">
+                                            <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Hair Services</a>
+                                                    </h3>
+                                                </div>
+                                                <div id="collapse1" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="list-group">
+                                                            <button type="button" class="list-group-item">Hair Cut</button>
+                                                            <button type="button" class="list-group-item">Hair Color</button>
+                                                            <button type="button" class="list-group-item">Hair Styling</button>
+                                                            <button type="button" class="list-group-item">Hair Treatment</button>
+                                                            <button type="button" class="list-group-item">Hair Straightening</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Skin Services</a>
+                                                    </h3>
+                                                </div>
+                                                <div id="collapse2" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="list-group">
+                                                            <button type="button" class="list-group-item">Waxing</button>
+                                                            <button type="button" class="list-group-item">Threading</button>
+                                                            <button type="button" class="list-group-item">Bleech</button>
+                                                            <button type="button" class="list-group-item">Clean up</button>
+                                                            <button type="button" class="list-group-item">Mask</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Hands & Feet Services</a>
+                                                    </h3>
+                                                </div>
+                                                <div id="collapse3" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="list-group">
+                                                            <button type="button" class="list-group-item">Manicure</button>
+                                                            <button type="button" class="list-group-item">Pedicure</button>
+                                                            <button type="button" class="list-group-item">Nail Polish</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Body Services</a>
+                                                    </h3>
+                                                </div>
+                                                <div id="collapse4" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="list-group">
+                                                            <button type="button" class="list-group-item">Body Massage</button>
+                                                            <button type="button" class="list-group-item">Body Wrap</button>
+                                                            <button type="button" class="list-group-item">Body Therapy</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Make up</a>
+                                                    </h3>
+                                                </div>
+                                                <div id="collapse5" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="list-group">
+                                                            <button type="button" class="list-group-item">Bride/Groom</button>
+                                                            <button type="button" class="list-group-item">Daily Makeup</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row menuInfo">
+                                        <p class="mainHeader">Menu</p>
+                                        <div class="menuImageContainer">
+                                            <div class="galleryItem">
+                                                <a href="#"><img src="img/menu1.jpg"/></a>
+                                            </div>
+                                            <div class="galleryItem">
+                                                <a href="#"><img src="img/menu2.png"/></a>
+                                            </div>
+                                            <div class="galleryItem">
+                                                <a href="#"><img src="img/menu3.png"/></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row photoGalleryInfo">
+                                        <p class="mainHeader">photos</p>
+                                        <div class="menuImageContainer">
+                                            <div class="galleryItem">
+                                                <a href="#"><img src="img/salon4.jpg"/></a>
+                                            </div>
+                                            <div class="galleryItem">
+                                                <a href="#"><img src="img/salon4.jpg"/></a>
+                                            </div>
+                                            <div class="galleryItem">
+                                                <a href="#"><img src="img/salon4.jpg"/></a>
+                                            </div>
+                                            <div class="galleryItem">
+                                                <a href="#"><img src="img/salon4.jpg"/></a>
+                                            </div>
+                                            <div class="galleryItem">
+                                                <a href="#"><img src="img/salon4.jpg"/></a>
+                                            </div>
+                                            <div class="galleryItem">
+                                                <a href="#"><img src="img/salon4.jpg"/></a>
+                                            </div>
+                                            <div class="galleryItem">
+                                                <a href="#"><img src="img/salon4.jpg"/></a>
+                                            </div>
+                                            <div class="galleryItem">
+                                                <a href="#"><img src="img/salon4.jpg"/></a>
+                                            </div>
+                                            <div class="galleryItem">
+                                                <a href="#"><img src="img/salon4.jpg"/></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row writeReviewInfo">
+                                        <p class="mainHeader">write a review</p>
+                                        <div id="reviewContainerID"class="reviewContainer" style="display: block"  onclick="swapDivsWithClick('reviewContainerID', 'reviewWriteContainerID')">
+                                            <p class="containerDisabled">Please write at least 140 characters about your personal experience at this salon.
+                                        </div>
+                                        <div id="reviewWriteContainerID"class="reviewWriteContainer" style="display: none">
+                                            <p class="reviewHeader">Write a review for Salon1</p>
+                                            <p class="yourRatingLabel">your rating</p>
+                                            <form>
+                                                <input id="input-2c" class="rating" min="0" max="5" step="0.5" data-size="sm"
+                                                       data-symbol="&#xf005;" data-glyphicon="false" data-rating-class="rating-fa" >
+                                            </form>
+                                            <hr style="border-top-color:  #9a9a9a">
+                                            <textarea placeholder="Go Ahead. Write your heart out :) " style="max-width: 100%;"class="form-control" rows="6" id="comment"></textarea>
+                                            <div class="row" style="margin-top: 10px;">
+                                                <button type="button" class="btn btn-link pull-left" onclick="swapDivsWithClick('reviewContainerID', 'reviewWriteContainerID')">Cancel</button>
+                                                <button type="button" class="btn btn-success pull-right">Publish Review</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row reviewsInfo">
+                                        <p class="mainHeader">review</p>
+                                        <p class="reviewAllHeader">Reviews 183</p>
+                                        <hr style="border-top-color:  #9a9a9a">
+                                        <div class="allReviewsDiv">
+                                            <div class="reviewItem">
+                                                <blockquote>
+                                                    <div class=" row reviewItemHeader">
+                                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                                            <a href="#"><img src="img/savatar1.png" class="img-responsive" style="width: 34px;height: 34px;"></a>
+                                                        </div>
+                                                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                                                            <div class="row">
+                                                                <p class="reviewItemHeaderName"> Derp Dutta</p>
+                                                            </div>
+                                                            <div class="row">
+                                                                <p class="reviewItemHeaderDetails"> 13 Reviews</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row reviewItemBody">
+                                                        <p class="reviewItemBodyDetails">
+                                                            <span class="reviewItemBodyRatedLabel">Rated</span>
+                                                            <span class="reviewItemBodyRating">4.0</span>
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                                        </p>
+                                                    </div>
+                                                </blockquote>
+                                            </div>
+                                            <div class="reviewItem">
+                                                <blockquote>
+                                                    <div class=" row reviewItemHeader">
+                                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                                            <a href="#"><img src="img/savatar1.png" class="img-responsive" style="width: 34px;height: 34px;"></a>
+                                                        </div>
+                                                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                                                            <div class="row">
+                                                                <p class="reviewItemHeaderName"> Derp Dutta</p>
+                                                            </div>
+                                                            <div class="row">
+                                                                <p class="reviewItemHeaderDetails"> 13 Reviews</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row reviewItemBody">
+                                                        <p class="reviewItemBodyDetails">
+                                                            <span class="reviewItemBodyRatedLabel">Rated</span>
+                                                            <span class="reviewItemBodyRating">4.0</span>
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                                        </p>
+                                                    </div>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row stylistRatingDiv">
+                                        <p class="mainHeader">Stylist Details</p>
+                                        <div class="panel-group" id="stylistAccordion">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <div class="row">
+                                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                                            <img class="img-rounded" src="img/stylist1.png" style="width: 34px;height: 34px;">
+                                                        </div>
+                                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 stylistPanelTitle">
+                                                            <a data-toggle="collapse" data-parent="#stylistAccordion" href="#stylistCollapse1">
+                                                                Stylist 1
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 stylistPanelTitleRating">
+                                                            <span class="label label-success">3.9</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="stylistCollapse1" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 zeroPadding">
+                                                            <div id="reviewWriteContainerID"class="reviewWriteContainer">
+                                                                <p class="reviewHeader">Write a review for Stylist 1</p>
+                                                                <p class="yourRatingLabel">your rating</p>
+                                                                <form>
+                                                                    <input id="input-2d" class="rating" min="0" max="5" step="0.5" data-size="xs"
+                                                                           data-symbol="&#xf005;" data-glyphicon="false" data-rating-class="rating-fa" >
+                                                                </form>
+                                                                <hr style="border-top-color:  #9a9a9a">
+                                                                <textarea placeholder="Go Ahead. Write your heart out :) " style="max-width: 100%;"class="form-control" rows="6" id="comment"></textarea>
+                                                                <div class="row" style="margin-top: 10px;">
+                                                                    <button type="button" class="btn btn-success pull-right">Publish Review</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 zeroPadding">
+                                                            <div id="stylistReviews">
+                                                                <p class="reviewAllHeader" style="margin-left:10px;margin-top: 5px;">Reviews 183</p>
+                                                                <hr style="border-top-color:  #9a9a9a">
+                                                                <div class="reviewItem">
+                                                                    <blockquote>
+                                                                        <div class=" row reviewItemHeader">
+                                                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                                                                <a href="#"><img src="img/savatar1.png" class="img-responsive" style="width: 34px;height: 34px;"></a>
+                                                                            </div>
+                                                                            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                                                                                <div class="row">
+                                                                                    <p class="reviewItemHeaderName"> Derp Dutta</p>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <p class="reviewItemHeaderDetails"> 13 Reviews</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row reviewItemBody">
+                                                                            <p class="reviewItemBodyDetails">
+                                                                                <span class="reviewItemBodyRatedLabel">Rated</span>
+                                                                                <span class="reviewItemBodyRating">4.0</span>
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                                                            </p>
+                                                                        </div>
+                                                                    </blockquote>
+                                                                </div>
+                                                                <div class="reviewItem">
+                                                                    <blockquote>
+                                                                        <div class=" row reviewItemHeader">
+                                                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                                                                <a href="#"><img src="img/savatar1.png" class="img-responsive" style="width: 34px;height: 34px;"></a>
+                                                                            </div>
+                                                                            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                                                                                <div class="row">
+                                                                                    <p class="reviewItemHeaderName"> Derp Dutta</p>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <p class="reviewItemHeaderDetails"> 13 Reviews</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row reviewItemBody">
+                                                                            <p class="reviewItemBodyDetails">
+                                                                                <span class="reviewItemBodyRatedLabel">Rated</span>
+                                                                                <span class="reviewItemBodyRating">4.0</span>
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                                                            </p>
+                                                                        </div>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <div class="row">
+                                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                                            <img class="img-rounded" src="img/stylist1.png" style="width: 34px;height: 34px;">
+                                                        </div>
+                                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 stylistPanelTitle">
+                                                            <a data-toggle="collapse" data-parent="#stylistAccordion" href="#stylistCollapse2">
+                                                                Stylist 2
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 stylistPanelTitleRating">
+                                                            <span class="label label-success">3.9</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="stylistCollapse2" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 zeroPadding">
+                                                            <div id="reviewWriteContainerID"class="reviewWriteContainer">
+                                                                <p class="reviewHeader">Write a review for Stylist 2</p>
+                                                                <p class="yourRatingLabel">your rating</p>
+                                                                <form>
+                                                                    <input id="input-2d" class="rating" min="0" max="5" step="0.5" data-size="xs"
+                                                                           data-symbol="&#xf005;" data-glyphicon="false" data-rating-class="rating-fa" >
+                                                                </form>
+                                                                <hr style="border-top-color:  #9a9a9a">
+                                                                <textarea placeholder="Go Ahead. Write your heart out :) " style="max-width: 100%;"class="form-control" rows="6" id="comment"></textarea>
+                                                                <div class="row" style="margin-top: 10px;">
+                                                                    <button type="button" class="btn btn-success pull-right">Publish Review</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 zeroPadding">
+                                                            <div id="stylistReviews">
+                                                                <p class="reviewAllHeader" style="margin-left:10px;margin-top: 5px;">Reviews 183</p>
+                                                                <hr style="border-top-color:  #9a9a9a">
+                                                                <div class="reviewItem">
+                                                                    <blockquote>
+                                                                        <div class=" row reviewItemHeader">
+                                                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                                                                <a href="#"><img src="img/savatar1.png" class="img-responsive" style="width: 34px;height: 34px;"></a>
+                                                                            </div>
+                                                                            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                                                                                <div class="row">
+                                                                                    <p class="reviewItemHeaderName"> Derp Dutta</p>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <p class="reviewItemHeaderDetails"> 13 Reviews</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row reviewItemBody">
+                                                                            <p class="reviewItemBodyDetails">
+                                                                                <span class="reviewItemBodyRatedLabel">Rated</span>
+                                                                                <span class="reviewItemBodyRating">4.0</span>
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                                                            </p>
+                                                                        </div>
+                                                                    </blockquote>
+                                                                </div>
+                                                                <div class="reviewItem">
+                                                                    <blockquote>
+                                                                        <div class=" row reviewItemHeader">
+                                                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                                                                <a href="#"><img src="img/savatar1.png" class="img-responsive" style="width: 34px;height: 34px;"></a>
+                                                                            </div>
+                                                                            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                                                                                <div class="row">
+                                                                                    <p class="reviewItemHeaderName"> Derp Dutta</p>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <p class="reviewItemHeaderDetails"> 13 Reviews</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row reviewItemBody">
+                                                                            <p class="reviewItemBodyDetails">
+                                                                                <span class="reviewItemBodyRatedLabel">Rated</span>
+                                                                                <span class="reviewItemBodyRating">4.0</span>
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                                                            </p>
+                                                                        </div>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <div class="row">
+                                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                                            <img class="img-rounded" src="img/stylist2.png" style="width: 34px;height: 34px;">
+                                                        </div>
+                                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 stylistPanelTitle">
+                                                            <a data-toggle="collapse" data-parent="#stylistAccordion" href="#stylistCollapse3">
+                                                                Stylist 3
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 stylistPanelTitleRating">
+                                                            <span class="label label-success">4.2</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="stylistCollapse3" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 zeroPadding">
+                                                            <div id="reviewWriteContainerID"class="reviewWriteContainer">
+                                                                <p class="reviewHeader">Write a review for Stylist 3</p>
+                                                                <p class="yourRatingLabel">your rating</p>
+                                                                <form>
+                                                                    <input id="input-2d" class="rating" min="0" max="5" step="0.5" data-size="xs"
+                                                                           data-symbol="&#xf005;" data-glyphicon="false" data-rating-class="rating-fa" >
+                                                                </form>
+                                                                <hr style="border-top-color:  #9a9a9a">
+                                                                <textarea placeholder="Go Ahead. Write your heart out :) " style="max-width: 100%;"class="form-control" rows="6" id="comment"></textarea>
+                                                                <div class="row" style="margin-top: 10px;">
+                                                                    <button type="button" class="btn btn-success pull-right">Publish Review</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 zeroPadding">
+                                                            <div id="stylistReviews">
+                                                                <p class="reviewAllHeader" style="margin-left:10px;margin-top: 5px;">Reviews 183</p>
+                                                                <hr style="border-top-color:  #9a9a9a">
+                                                                <div class="reviewItem">
+                                                                    <blockquote>
+                                                                        <div class=" row reviewItemHeader">
+                                                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                                                                <a href="#"><img src="img/savatar1.png" class="img-responsive" style="width: 34px;height: 34px;"></a>
+                                                                            </div>
+                                                                            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                                                                                <div class="row">
+                                                                                    <p class="reviewItemHeaderName"> Derp Dutta</p>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <p class="reviewItemHeaderDetails"> 13 Reviews</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row reviewItemBody">
+                                                                            <p class="reviewItemBodyDetails">
+                                                                                <span class="reviewItemBodyRatedLabel">Rated</span>
+                                                                                <span class="reviewItemBodyRating">4.0</span>
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                                                            </p>
+                                                                        </div>
+                                                                    </blockquote>
+                                                                </div>
+                                                                <div class="reviewItem">
+                                                                    <blockquote>
+                                                                        <div class=" row reviewItemHeader">
+                                                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                                                                <a href="#"><img src="img/savatar1.png" class="img-responsive" style="width: 34px;height: 34px;"></a>
+                                                                            </div>
+                                                                            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                                                                                <div class="row">
+                                                                                    <p class="reviewItemHeaderName"> Derp Dutta</p>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <p class="reviewItemHeaderDetails"> 13 Reviews</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row reviewItemBody">
+                                                                            <p class="reviewItemBodyDetails">
+                                                                                <span class="reviewItemBodyRatedLabel">Rated</span>
+                                                                                <span class="reviewItemBodyRating">4.0</span>
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                                                            </p>
+                                                                        </div>
+                                                                    </blockquote>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 mainHeader"> 
+                            <div class="row mainHeader"> Exclusive Offers
+                                <hr>
+                                <div id="offersListDivNoScroll">
+                                    <div class="row offerListRow">
+                                        <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2">
+                                            <img src="img/salon3.jpg" alt="stylekaro" class="center-block offerBrandLogo">
+                                        </div>
+                                        <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10">
+                                            <div class="row">
+                                                <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10 zeroPadding">
+                                                    <p class="itemHeader">Offer1</p>
+                                                </div>
+                                                <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2 heartPadding">
+                                                    <img src="img/heart_empty.png" onmouseover="this.src = 'img/heart_full.png'" onmouseout="this.src = 'img/heart_empty.png'"alt="heart_empty" class="">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <p class="detailsHeader" >Get 30% discount on hair spa today!</p>
+                                            </div>
+                                            <div class="row ">
+                                                <button class="btn btn-danger pull-right offerButtonFont" type="button">
+                                                    Offer Details 
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row offerListRow">
+                                        <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2">
+                                            <img src="img/salon3.jpg" alt="stylekaro" class="offerBrandLogo center-block">
+                                        </div>
+                                        <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10">
+                                            <div class="row">
+                                                <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10 zeroPadding">
+                                                    <p class="itemHeader" >Offer1</p>
+                                                </div>
+                                                <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2 heartPadding">
+                                                    <img src="img/heart_empty.png" onmouseover="this.src = 'img/heart_full.png'" onmouseout="this.src = 'img/heart_empty.png'"alt="heart_empty" class="">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <p class="detailsHeader">Get 30% discount on hair spa today!</p>
+                                            </div>
+                                            <div class="row ">
+                                                <button class="btn btn-danger pull-right offerButtonFont" type="button">
+                                                    Offer Details 
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row offerListRow">
+                                        <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2">
+                                            <img src="img/salon3.jpg" alt="stylekaro" class="offerBrandLogo center-block">
+                                        </div>
+                                        <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10">
+                                            <div class="row">
+                                                <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10 zeroPadding">
+                                                    <p class="itemHeader">Offer1</p>
+                                                </div>
+                                                <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2 heartPadding">
+                                                    <img src="img/heart_empty.png" onmouseover="this.src = 'img/heart_full.png'" onmouseout="this.src = 'img/heart_empty.png'"alt="heart_empty" class="">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <p class="detailsHeader">Get 30% discount on hair spa today!</p>
+                                            </div>
+                                            <div class="row ">
+                                                <button class="btn btn-danger pull-right offerButtonFont" type="button">
+                                                    Offer Details 
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mainHeader"> Nearby Salons
+                                <hr>
+                                <div id="nearbySalonDiv">
+                                    <div class="row nearByRow">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a><img class="img-rounded" src="img/thumb1.jpg" style="width: 34px;height: 34px;"></a>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                            <div class="row">
+                                                <p class="nearBySalonName">Salon 2</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="nearBySalonLocation">Rajarhat, Newtown, Kolkata</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <span class="label labelNearBySalonRating">3.8</span>
+                                        </div>
+                                    </div>
+                                    <div class="row nearByRow">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a><img class="img-rounded" src="img/thumb1.jpg" style="width: 34px;height: 34px;"></a>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                            <div class="row">
+                                                <p class="nearBySalonName">Salon 3</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="nearBySalonLocation">Rajarhat, Newtown, Kolkata</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <span class="label labelNearBySalonRating">4.6</span>
+                                        </div>
+                                    </div>
+                                    <div class="row nearByRow">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a><img class="img-rounded" src="img/thumb1.jpg" style="width: 34px;height: 34px;"></a>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                            <div class="row">
+                                                <p class="nearBySalonName">Salon 4</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="nearBySalonLocation">Rajarhat, Newtown, Kolkata</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <span class="label labelNearBySalonRating">3.2</span>
+                                        </div>
+                                    </div>
+                                    <div class="row nearByRow">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a><img class="img-rounded" src="img/thumb1.jpg" style="width: 34px;height: 34px;"></a>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                            <div class="row">
+                                                <p class="nearBySalonName">Salon 5</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="nearBySalonLocation">Rajarhat, Newtown, Kolkata</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <span class="label labelNearBySalonRating">3.9</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>     
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-top-wrapper ">
+                <span class="scroll-top-inner">
+                    <i class="fa fa-2x fa-arrow-circle-up"></i>
+                </span>
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script src="js/jquery-1.11.3.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+        <script src="js/salon.js"></script>
+
+        <script src="js/common.js"></script>
+
+        <script src="js/star-rating.js"></script>
+
+
+    </body>
+</html>

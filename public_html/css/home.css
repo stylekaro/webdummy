@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 7, 2015, 1:30:31 PM
+    Author     : eraktri
+*/
+
+
+/*-------------------------------*/
+/*            Service list            */
+/*-------------------------------*/
+
+.serviceListRow {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #F1F1F1;
+}
+
+#map {
+    height: 240px;
+}
+
+.btnNext{
+    margin-top: 33%; 
+}
+

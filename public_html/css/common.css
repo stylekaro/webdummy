@@ -1,0 +1,572 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 9, 2015, 3:45:38 PM
+    Author     : eraktri
+*/
+
+.navbar-inverse {
+    background-color: #F11888;
+    border-color: #F70682;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #000;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #555;
+    background-color: #F5F5F5;
+}
+
+.dropdown-menu{
+    background-color: #F5F5F5;
+}
+
+.nav .open > a, 
+.nav .open > a:hover, 
+.nav .open > a:focus {background-color: transparent;}
+
+/*-------------------------------*/
+/*           Wrappers            */
+/*-------------------------------*/
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 220px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    left: 220px;
+    width: 0;
+    height: 100%;
+    margin-left: -220px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #fff;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 220px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    /* padding-top: 70px; */
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -220px;
+}
+
+/*-------------------------------*/
+/*     Sidebar nav styles        */
+/*-------------------------------*/
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 220px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    position: relative; 
+    line-height: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.sidebar-nav li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 3px;
+    background-color: #1c1c1c;
+    -webkit-transition: width .2s ease-in;
+    -moz-transition:  width .2s ease-in;
+    -ms-transition:  width .2s ease-in;
+    transition: width .2s ease-in;
+
+}
+.sidebar-nav li:first-child a {
+    color: #fff;
+    background-color: #ED1D88;
+}
+.sidebar-nav li:nth-child(2):before {
+    background-color: #ec1b5a;   
+}
+.sidebar-nav li:nth-child(3):before {
+    background-color: #79aefe;   
+}
+.sidebar-nav li:nth-child(4):before {
+    background-color: #314190;   
+}
+.sidebar-nav li:nth-child(5):before {
+    background-color: #279636;   
+}
+.sidebar-nav li:nth-child(6):before {
+    background-color: #7d5d81;   
+}
+.sidebar-nav li:nth-child(7):before {
+    background-color: #ead24c;   
+}
+.sidebar-nav li:nth-child(8):before {
+    background-color: #2d2366;   
+}
+.sidebar-nav li:nth-child(9):before {
+    background-color: #35acdf;   
+}
+.sidebar-nav li:hover:before,
+.sidebar-nav li.open:hover:before {
+    width: 100%;
+    -webkit-transition: width .2s ease-in;
+    -moz-transition:  width .2s ease-in;
+    -ms-transition:  width .2s ease-in;
+    transition: width .2s ease-in;
+
+}
+
+.sidebar-nav li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 15px 10px 30px;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus,
+.sidebar-nav li.open a:hover,
+.sidebar-nav li.open a:active,
+.sidebar-nav li.open a:focus{
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 20px;
+    line-height: 44px;
+}
+.sidebar-nav .dropdown-menu {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    background-color: #222;
+    box-shadow: none;
+}
+
+/*-------------------------------*/
+/*       Hamburger-Cross         */
+/*-------------------------------*/
+
+.hamburger {
+    position: fixed;
+    top: 10px;
+    z-index: 999;
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-left: 15px;
+    background: transparent;
+    border: none;
+}
+.hamburger:hover,
+.hamburger:focus,
+.hamburger:active {
+    outline: none;
+}
+.hamburger.is-closed:before {
+    content: '';
+    display: block;
+    width: 100px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 32px;
+    text-align: center;
+    opacity: 0;
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed:hover:before {
+    opacity: 1;
+    display: block;
+    -webkit-transform: translate3d(-100px,0,0);
+    -webkit-transition: all .35s ease-in-out;
+}
+
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom,
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle,
+.hamburger.is-open .hamb-bottom {
+    position: absolute;
+    left: 0;
+    height: 4px;
+    width: 100%;
+}
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom {
+    background-color: #000;
+}
+.hamburger.is-closed .hamb-top { 
+    top: 5px; 
+    -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed .hamb-middle {
+    top: 50%;
+    margin-top: -2px;
+}
+.hamburger.is-closed .hamb-bottom {
+    bottom: 5px;  
+    -webkit-transition: all .35s ease-in-out;
+}
+
+.hamburger.is-closed:hover .hamb-top {
+    top: 0;
+    -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed:hover .hamb-bottom {
+    bottom: 0;
+    -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle,
+.hamburger.is-open .hamb-bottom {
+    background-color: #ED1D88;
+}
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-bottom {
+    top: 50%;
+    margin-top: -2px;  
+}
+.hamburger.is-open .hamb-top { 
+    -webkit-transform: rotate(45deg);
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+}
+.hamburger.is-open .hamb-middle { display: none; }
+.hamburger.is-open .hamb-bottom {
+    -webkit-transform: rotate(-45deg);
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+}
+.hamburger.is-open:before {
+    content: '';
+    display: block;
+    width: 100px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 32px;
+    text-align: center;
+    opacity: 0;
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-open:hover:before {
+    opacity: 1;
+    display: block;
+    -webkit-transform: translate3d(-100px,0,0);
+    -webkit-transition: all .35s ease-in-out;
+}
+
+/*-------------------------------*/
+/*            Overlay            */
+/*-------------------------------*/
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(250,250,250,.8);
+    z-index: 1;
+}
+
+.carousel-control.right{
+    margin-top: 50px;
+}
+
+.carousel-control.left{
+    margin-top: 50px;
+}
+
+/*-------------------------------*/
+/*            Topnavbar            */
+/*-------------------------------*/
+
+.navbar-collapse {
+    position: relative;
+    padding-top: 30px !important;
+    max-height: 270px;
+}
+.navbar-collapse form[role="search"] {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    z-index: 0;
+}
+.navbar-collapse form[role="search"] button,
+.navbar-collapse form[role="search"] input {
+    padding: 8px 12px;
+    border-radius: 0px;
+    border-width: 0px;
+    color: #000;
+    background-color: #F5F5F5;
+    border-color: #F5F5F5;
+    box-shadow: none;
+    outline: none;
+}
+.navbar-collapse form[role="search"] input {
+    padding: 16px 12px;
+    font-size: 14pt;
+    font-style: italic;
+    color: #000;
+    box-shadow: none;
+}
+.navbar-collapse form[role="search"] button[type="reset"] {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .navbar-collapse {
+        padding-top: 0px !important;
+        padding-right: 38px !important;
+    }
+    .navbar-collapse form[role="search"] {
+        width: 38px;
+    }
+    .navbar-collapse form[role="search"] button,
+    .navbar-collapse form[role="search"] input {
+        padding: 15px 12px;
+    }
+    .navbar-collapse form[role="search"] input {
+        padding: 25px 12px;
+        font-size: 18pt;
+        opacity: 0;
+        display: none;
+    }
+    .navbar-collapse form[role="search"].active {
+        width: 100%;
+    }
+    .navbar-collapse form[role="search"].active button,
+    .navbar-collapse form[role="search"].active input {
+        display: table-cell;
+        opacity: 1;
+    }
+    .navbar-collapse form[role="search"].active input {
+        width: 100%;
+    }
+}
+
+.customNavbar{
+    margin-bottom: 0px;
+    border-radius: 0px;
+    border: 0px;
+    background-color: #F5F5F5;
+}
+
+.selectCityDD{
+    margin-right: 10px;
+}
+
+.searchForm{
+    background-color: #ED1D88;
+}
+
+input::-webkit-input-placeholder {
+    color: #000 !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+    color:  #000 !important;  
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+    color:  #000 !important;  
+}
+
+input:-ms-input-placeholder {  
+    color:  #000 !important;  
+}
+
+/*row*/
+
+.row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+/*body*/
+body{
+    background-color: #ddd;
+}
+
+/*OffersList*/
+
+.offerListRow {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #F1F1F1;
+}
+
+.mainHeader{
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #2d2d2d;
+    font-family: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+}
+
+.itemHeader{
+    font-weight: 700;
+    color: #2d2d2d;
+    text-transform: none;
+    font-size: 14px;
+    text-align:left;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+
+.detailsHeader{
+    font-weight:normal;
+    color: #2d2d2d;
+    text-transform: none;
+    font-size: 14px;
+    text-align:left;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 20px;
+}
+
+.offerButtonFont{
+    padding-top: 10px;
+    font-weight:normal;
+    color:#fff;
+    font-size:12px;
+    text-align:left;
+    font-family:georgia, serif;
+}
+
+#serviceListDiv{
+    height: 240px;
+    overflow-y: scroll;
+}
+
+#offersListDiv{
+    height: 240px;
+    overflow-y: scroll;
+}
+
+#offersListDivNoScroll{
+    height: auto;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.zeroPadding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.btnLove{
+    margin-top: 10%;
+}
+
+.heartPadding{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: -5px;
+}
+
+.scroll-top-wrapper {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    text-align: center;
+    z-index: 99999999;
+    background-color: #777777;
+    color: #eeeeee;
+    width: 50px;
+    height: 48px;
+    line-height: 48px;
+    right: 30px;
+    bottom: 30px;
+    padding-top: 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.scroll-top-wrapper:hover {
+    background-color: #888888;
+}
+.scroll-top-wrapper.show {
+    visibility:visible;
+    cursor:pointer;
+    opacity: 1.0;
+}
+.scroll-top-wrapper i.fa {
+    line-height: inherit;
+}
+
+.offerBrandLogo{
+    height: 32px;
+    width: 32px;
+}

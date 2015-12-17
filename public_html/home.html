@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>StyleKaro</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/half-slider.css" rel="stylesheet">
+        <link href="css/common.css" rel="stylesheet">
+        <link href="css/home.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+            <div class="overlay"></div>
+
+            <!--top Navbar-->
+            <nav class="navbar navbar-default customNavbar" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" style="padding: 0px;" href="#">
+                            <img alt="Stylekoro" src="img/logo.png" >
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav ">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle selectCityDD" data-toggle="dropdown">Select city <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Kolkata</a></li>
+                                    <li><a href="#">Delhi</a></li>
+                                    <li><a href="#">Mumbai</a></li>
+                                    <li><a href="#">Bangalore</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form" role="search">
+                            <div class="input-group" style="margin-left: 50px;">
+                                <input type="text" class="form-control pull-right searchForm" placeholder="Search">
+                                <span class="input-group-btn">
+                                    <button type="reset" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-remove">
+                                            <span class="sr-only">Close</span>
+                                        </span>
+                                    </button>
+                                    <button type="submit" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-search">
+                                            <span class="sr-only">Search</span>
+                                        </span>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+            <!--sidebar-->
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+                <ul class="nav sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a href="#">
+                            StyleKaro
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Salon</a>
+                    </li>
+                    <li>
+                        <a href="#">Offers</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="page-content-wrapper">
+                <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                    <span class="hamb-top"></span>
+                    <span class="hamb-middle"></span>
+                    <span class="hamb-bottom"></span>
+                </button>
+                <header id="myCarousel" class="carousel slide">
+
+                    <!-- Wrapper for Slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <!-- Set the first background image using inline CSS below. -->
+                            <div class="fill" style="background-image:url('img/salon1.jpg');"></div>
+                            <div class="carousel-caption">
+                                <h2>Explore popular salons in town!</h2>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- Set the second background image using inline CSS below. -->
+                            <div class="fill" style="background-image:url('img/salon1.jpg');"></div>
+                            <div class="carousel-caption">
+                                <h2>Explore popular salons in town!</h2>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- Set the third background image using inline CSS below. -->
+                            <div class="fill" style="background-image:url('img/salon1.jpg');"></div>
+                            <div class="carousel-caption">
+                                <h2>Explore popular salons in town!</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="icon-prev"></span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="icon-next"></span>
+                    </a>
+
+                </header>
+                <div class="container" style="margin-top: 10px;">
+                    <!-- /.container -->
+                    <div class="row ">
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mainHeader"> Locate Salon:
+                            <hr>
+                            <div id="map">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mainHeader">Service List: 
+                            <hr>
+                            <div id="serviceListDiv">
+                                <div class="row serviceListRow">
+                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                        <img src="img/salon2.png" alt="stylekaro" class="img-responsive center-block">
+                                    </div>
+                                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                                        <div class="row itemHeader">Hair Cut</div>
+                                        <div class="row detailsHeader">Give yourself a new look with awesome hair</div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                                        <button type="button" class="btn btn-default btnNext" aria-label="Left Align">
+                                            <span class="glyphicon  glyphicon-chevron-right" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row serviceListRow">
+                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                        <img src="img/salon2.png" alt="stylekaro" class="img-responsive center-block">
+                                    </div>
+                                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                                        <div class="row itemHeader">Hair Cut</div>
+                                        <div class="row detailsHeader">Give yourself a new look with awesome hair</div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                                        <button type="button" class="btn btn-default btnNext" aria-label="Left Align">
+                                            <span class="glyphicon  glyphicon-chevron-right" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row serviceListRow">
+                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                        <img src="img/salon2.png" alt="stylekaro" class="img-responsive center-block">
+                                    </div>
+                                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                                        <div class="row itemHeader">Hair Cut</div>
+                                        <div class="row detailsHeader">Give yourself a new look with awesome hair</div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                                        <button type="button" class="btn btn-default btnNext" aria-label="Left Align">
+                                            <span class="glyphicon  glyphicon-chevron-right" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row serviceListRow">
+                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                        <img src="img/salon2.png" alt="stylekaro" class="img-responsive center-block">
+                                    </div>
+                                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                                        <div class="row itemHeader">Hair Cut</div>
+                                        <div class="row detailsHeader">Give yourself a new look with awesome hair</div>
+                                    </div>
+                                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                                        <button type="button" class="btn btn-default btnNext" aria-label="Left Align">
+                                            <span class="glyphicon  glyphicon-chevron-right" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mainHeader"> Exclusive Offers:
+                            <hr>
+                            <div id="offersListDiv">
+                                <div class="row offerListRow">
+                                    <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2">
+                                        <img src="img/salon3.jpg" alt="stylekaro" class="offerBrandLogo center-block">
+                                    </div>
+                                    <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10">
+                                        <div class="row">
+                                            <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10 zeroPadding">
+                                                <p class="itemHeader">Offer1</p>
+                                            </div>
+                                            <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2 heartPadding">
+                                                <img src="img/heart_empty.png" onmouseover="this.src = 'img/heart_full.png'" onmouseout="this.src = 'img/heart_empty.png'"alt="heart_empty" class="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p class="detailsHeader" >Get 30% discount on hair spa today!</p>
+                                        </div>
+                                        <div class="row ">
+                                            <button class="btn btn-danger pull-right offerButtonFont" type="button">
+                                                Offer Details 
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row offerListRow">
+                                    <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2">
+                                        <img src="img/salon3.jpg" alt="stylekaro" class="offerBrandLogo center-block">
+                                    </div>
+                                    <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10">
+                                        <div class="row">
+                                            <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10 zeroPadding">
+                                                <p class="itemHeader" >Offer1</p>
+                                            </div>
+                                            <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2 heartPadding">
+                                                <img src="img/heart_empty.png" onmouseover="this.src = 'img/heart_full.png'" onmouseout="this.src = 'img/heart_empty.png'"alt="heart_empty" class="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p class="detailsHeader">Get 30% discount on hair spa today!</p>
+                                        </div>
+                                        <div class="row ">
+                                            <button class="btn btn-danger pull-right offerButtonFont" type="button">
+                                                Offer Details 
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row offerListRow">
+                                    <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2">
+                                        <img src="img/salon3.jpg" alt="stylekaro" class="offerBrandLogo center-block">
+                                    </div>
+                                    <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10">
+                                        <div class="row">
+                                            <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10 zeroPadding">
+                                                <p class="itemHeader">Offer1</p>
+                                            </div>
+                                            <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2 heartPadding">
+                                                <img src="img/heart_empty.png" onmouseover="this.src = 'img/heart_full.png'" onmouseout="this.src = 'img/heart_empty.png'"alt="heart_empty" class="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <p class="detailsHeader">Get 30% discount on hair spa today!</p>
+                                        </div>
+                                        <div class="row ">
+                                            <button class="btn btn-danger pull-right offerButtonFont" type="button">
+                                                Offer Details 
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </div>   
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script src="js/home.js"></script>
+    
+    <script src="js/common.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <script src="js/locateSalon.js"></script>
+
+</body>
+
+</html>
