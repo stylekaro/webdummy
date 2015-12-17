@@ -29,8 +29,11 @@ and open the template in the editor.
     color:white;
 }
 
+.salonImageRow {
+    margin-top: 165px;
+}
+
 .salonImageTitle{
-    margin-top: 250px;
     margin-right: 50px;
     color:#fff;
     letter-spacing:1pt;
@@ -44,7 +47,7 @@ and open the template in the editor.
 
 .btnRating{
     height: 50px;
-    margin-top: 244px;
+    margin-top: 214px;
     font-weight:bold;
     background-color: #3f7e00;
     color:#fff;
@@ -54,7 +57,37 @@ and open the template in the editor.
     padding-top: 8px;
 }
 
+.btnSalonTag{
+    background: #f2c572;
+    margin-bottom: 25px;
+    padding: 4px 12px;
+    border-radius: 10px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    letter-spacing: 1px;
+    color: #fff!important;
+    font-family: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+}
+
+.btnSalonTag:hover{
+    background: #f2c572;
+    padding: 4px 12px;
+    border-radius: 10px;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    letter-spacing: .01em;
+    letter-spacing: 1px;
+    color: #fff!important;
+    font-family: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+}
+
 .salonImageWidth{
+    width: 70%;
+}
+
+.bookAppointmentBtnDiv{
     width: 70%;
 }
 
@@ -238,7 +271,6 @@ and open the template in the editor.
     background-color: #f0f0f0;
     padding: 5px 7px;
     border-radius: 3px;
-    /* cursor: pointer; */
     display: block;
 }
 
@@ -253,7 +285,6 @@ and open the template in the editor.
 
 .yourRatingLabel{
     font-size: 10px;
-    /* padding-bottom: 5px; */
     text-transform: uppercase;
     font-weight: 700;
     color: #9a9a9a;
@@ -266,12 +297,14 @@ and open the template in the editor.
     font-size: 13.33px;
     font-weight: bold;
     line-height: 18px;
+    color: #cb202d;
 }
 
 .reviewItemHeaderName{
     font-size: 14px;
     font-weight: bold;
     line-height: 21px;
+    margin-bottom: 0px;
 }
 
 .reviewItemHeaderDetails{
