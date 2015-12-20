@@ -570,3 +570,7 @@ hr {
     height: 32px;
     width: 32px;
 }
+
+.zeroBottomMargin{
+    margin-bottom: 0px !important;
+}

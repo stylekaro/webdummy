@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>StyleKaro</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/search.css" rel="stylesheet">
+        <link href="css/common.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="overlay"></div>
+
+            <!--top Navbar-->
+            <nav class="navbar navbar-default customNavbar" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" style="padding: 0px;" href="#">
+                            <img alt="Stylekoro" src="img/logo.png" >
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav ">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle selectCityDD" data-toggle="dropdown">Select city <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Kolkata</a></li>
+                                    <li><a href="#">Delhi</a></li>
+                                    <li><a href="#">Mumbai</a></li>
+                                    <li><a href="#">Bangalore</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form" role="search">
+                            <div class="input-group" style="margin-left: 50px;">
+                                <input type="text" class="form-control pull-right searchForm" placeholder="Search">
+                                <span class="input-group-btn">
+                                    <button type="reset" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-remove">
+                                            <span class="sr-only">Close</span>
+                                        </span>
+                                    </button>
+                                    <button type="submit" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-search">
+                                            <span class="sr-only">Search</span>
+                                        </span>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+            <!--sidebar-->
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+                <ul class="nav sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a href="#">
+                            StyleKaro
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Salon</a>
+                    </li>
+                    <li>
+                        <a href="#">Offers</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="page-content-wrapper">
+                <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                    <span class="hamb-top"></span>
+                    <span class="hamb-middle"></span>
+                    <span class="hamb-bottom"></span>
+                </button>
+                <div class="container">
+                    <div class="row searchHeaderRow">
+                        <ul class="list-inline">
+                            <li class="searchHeaderList"><a>Home</a> ></li>
+                            <li class="searchHeaderList"><a>India</a> ></li>
+                            <li class="searchHeaderList"><a>Kolkata Salons</a></li>
+                        </ul>
+                        <p class="searchHeaderLabelRow">Salon in Kolkata</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 zeroPadding">
+                            <div class="row salonCategoryRow">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li class="searchCategoryList">All</li>
+                                    <li class="searchCategoryList searchCategoryListSelected">Salon</li>
+                                    <li class="searchCategoryList">Spa</li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" style="background-color: white">
+                                    <div class="searchMapContainer">
+                                        <div id="searchMap"></div>
+                                    </div>
+                                    <div class="searchResultsList" id="searchResultListID">
+                                        <div class="row searchResultItem">
+                                            <div class="row searchResultItemInfoRow">
+                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 zeroPadding">
+                                                    <p class="zeroBottomMargin"><a class="searchResultItemName">Salon 1</a></p>
+                                                    <p class="zeroBottomMargin"><a class="searchResultItemArea"> Hindustan Park</a></p>
+                                                    <p class="zeroBottomMargin"><span class="searchResultItemAddress">18, Park Street Area, Kolkata</span></p>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 zeroPadding">
+                                                    <div class="row">
+                                                        <span class="label label-searchResultItemRating pull-right">3.9</span>
+                                                    </div>
+                                                    <div class="row">
+                                                        <span class="label label-searchResultItemRatingVotes pull-right">1217 votes</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row searchResultItemDetailInfoRow">
+                                                <p class="zeroBottomMargin searchResultItemDetails"><span class="itemTitle">Services: </span> Hair, Skin, Hands & Feet, Body</p>
+                                                <p class="zeroBottomMargin searchResultItemDetails"><span class="itemTitle">Category:  </span ><span class="tags"> Pocket-Friendly</span> </p>
+                                            </div>
+                                            <div class="searchResultItemLikeDetails">
+                                                <span class="searchResultItemLikeDetailsMain"><i class="fa fa-heart-o"></i> Derp Dutta</span> and 
+                                                <span class="searchResultItemLikeDetailsMain">4 others</span> like this
+                                            </div>
+                                            <div class="searchSalonImageContainer">
+                                                <div class="searchGalleryItem">
+                                                    <a href="#"><img src="img/salon4.jpg"/></a>
+                                                </div>
+                                                <div class="searchGalleryItem">
+                                                    <a href="#"><img src="img/salon4.jpg"/></a>
+                                                </div>
+                                                <div class="searchGalleryItem">
+                                                    <a href="#"><img src="img/salon4.jpg"/></a>
+                                                </div>
+                                            </div>
+                                            <div class="row searchResultItemMenuInfo">
+                                                <button type="button" class="btn btn-searchResultItemMenuInfo"><i class="fa fa-list-alt"></i> Menu</button>
+                                                <button type="button" class="btn btn-searchResultItemMenuInfo"><i class="fa fa-pencil-square-o"></i> 251 reviews</button>
+                                                <button type="button" class="btn btn-primary btn-searchResultItemBook"><i class="fa fa-scissors" style="color:white"></i> Book Appointment!</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="row searchResultItem">
+                                            <div class="row searchResultItemInfoRow">
+                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 zeroPadding">
+                                                    <p class="zeroBottomMargin"><a class="searchResultItemName">Salon 1</a></p>
+                                                    <p class="zeroBottomMargin"><a class="searchResultItemArea"> Hindustan Park</a></p>
+                                                    <p class="zeroBottomMargin"><span class="searchResultItemAddress">18, Park Street Area, Kolkata</span></p>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 zeroPadding">
+                                                    <div class="row">
+                                                        <span class="label label-searchResultItemRating pull-right">3.9</span>
+                                                    </div>
+                                                    <div class="row">
+                                                        <span class="label label-searchResultItemRatingVotes pull-right">1217 votes</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row searchResultItemDetailInfoRow">
+                                                <p class="zeroBottomMargin searchResultItemDetails"><span class="itemTitle">Services: </span> Hair, Skin, Hands & Feet, Body</p>
+                                                <p class="zeroBottomMargin searchResultItemDetails"><span class="itemTitle">Category:  </span ><span class="tags"> Pocket-Friendly</span> </p>
+                                            </div>
+                                            <div class="searchResultItemLikeDetails">
+                                                <span class="searchResultItemLikeDetailsMain"><i class="fa fa-heart-o"></i> Derp Dutta</span> and 
+                                                <span class="searchResultItemLikeDetailsMain">4 others</span> like this
+                                            </div>
+                                            <div class="searchSalonImageContainer">
+                                                <div class="searchGalleryItem">
+                                                    <a href="#"><img src="img/salon4.jpg"/></a>
+                                                </div>
+                                                <div class="searchGalleryItem">
+                                                    <a href="#"><img src="img/salon4.jpg"/></a>
+                                                </div>
+                                                <div class="searchGalleryItem">
+                                                    <a href="#"><img src="img/salon4.jpg"/></a>
+                                                </div>
+                                            </div>
+                                            <div class="row searchResultItemMenuInfo">
+                                                <button type="button" class="btn btn-searchResultItemMenuInfo"><i class="fa fa-list-alt"></i> Menu</button>
+                                                <button type="button" class="btn btn-searchResultItemMenuInfo"><i class="fa fa-pencil-square-o"></i> 251 reviews</button>
+                                                <button type="button" class="btn btn-primary btn-searchResultItemBook"><i class="fa fa-scissors" style="color:white"></i> Book Appointment!</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="row searchResultItem">
+                                            <div class="row searchResultItemInfoRow">
+                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 zeroPadding">
+                                                    <p class="zeroBottomMargin"><a class="searchResultItemName">Salon 1</a></p>
+                                                    <p class="zeroBottomMargin"><a class="searchResultItemArea"> Hindustan Park</a></p>
+                                                    <p class="zeroBottomMargin"><span class="searchResultItemAddress">18, Park Street Area, Kolkata</span></p>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 zeroPadding">
+                                                    <div class="row">
+                                                        <span class="label label-searchResultItemRating pull-right">3.9</span>
+                                                    </div>
+                                                    <div class="row">
+                                                        <span class="label label-searchResultItemRatingVotes pull-right">1217 votes</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row searchResultItemDetailInfoRow">
+                                                <p class="zeroBottomMargin searchResultItemDetails"><span class="itemTitle">Services: </span> Hair, Skin, Hands & Feet, Body</p>
+                                                <p class="zeroBottomMargin searchResultItemDetails"><span class="itemTitle">Category:  </span ><span class="tags"> Pocket-Friendly</span> </p>
+                                            </div>
+                                            <div class="searchResultItemLikeDetails">
+                                                <span class="searchResultItemLikeDetailsMain"><i class="fa fa-heart-o"></i> Derp Dutta</span> and 
+                                                <span class="searchResultItemLikeDetailsMain">4 others</span> like this
+                                            </div>
+                                            <div class="searchSalonImageContainer">
+                                                <div class="searchGalleryItem">
+                                                    <a href="#"><img src="img/salon4.jpg"/></a>
+                                                </div>
+                                                <div class="searchGalleryItem">
+                                                    <a href="#"><img src="img/salon4.jpg"/></a>
+                                                </div>
+                                                <div class="searchGalleryItem">
+                                                    <a href="#"><img src="img/salon4.jpg"/></a>
+                                                </div>
+                                            </div>
+                                            <div class="row searchResultItemMenuInfo">
+                                                <button type="button" class="btn btn-searchResultItemMenuInfo"><i class="fa fa-list-alt"></i> Menu</button>
+                                                <button type="button" class="btn btn-searchResultItemMenuInfo"><i class="fa fa-pencil-square-o"></i> 251 reviews</button>
+                                                <button type="button" class="btn btn-primary btn-searchResultItemBook"><i class="fa fa-scissors" style="color:white"></i> Book Appointment!</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="row searchResultItem">
+                                            <div class="row searchResultItemInfoRow">
+                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 zeroPadding">
+                                                    <p class="zeroBottomMargin"><a class="searchResultItemName">Salon 1</a></p>
+                                                    <p class="zeroBottomMargin"><a class="searchResultItemArea"> Hindustan Park</a></p>
+                                                    <p class="zeroBottomMargin"><span class="searchResultItemAddress">18, Park Street Area, Kolkata</span></p>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 zeroPadding">
+                                                    <div class="row">
+                                                        <span class="label label-searchResultItemRating pull-right">3.9</span>
+                                                    </div>
+                                                    <div class="row">
+                                                        <span class="label label-searchResultItemRatingVotes pull-right">1217 votes</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row searchResultItemDetailInfoRow">
+                                                <p class="zeroBottomMargin searchResultItemDetails"><span class="itemTitle">Services: </span> Hair, Skin, Hands & Feet, Body</p>
+                                                <p class="zeroBottomMargin searchResultItemDetails"><span class="itemTitle">Category:  </span ><span class="tags"> Pocket-Friendly</span> </p>
+                                            </div>
+                                            <div class="searchResultItemLikeDetails">
+                                                <span class="searchResultItemLikeDetailsMain"><i class="fa fa-heart-o"></i> Derp Dutta</span> and 
+                                                <span class="searchResultItemLikeDetailsMain">4 others</span> like this
+                                            </div>
+                                            <div class="searchSalonImageContainer">
+                                                <div class="searchGalleryItem">
+                                                    <a href="#"><img src="img/salon4.jpg"/></a>
+                                                </div>
+                                                <div class="searchGalleryItem">
+                                                    <a href="#"><img src="img/salon4.jpg"/></a>
+                                                </div>
+                                                <div class="searchGalleryItem">
+                                                    <a href="#"><img src="img/salon4.jpg"/></a>
+                                                </div>
+                                            </div>
+                                            <div class="row searchResultItemMenuInfo">
+                                                <button type="button" class="btn btn-searchResultItemMenuInfo"><i class="fa fa-list-alt"></i> Menu</button>
+                                                <button type="button" class="btn btn-searchResultItemMenuInfo"><i class="fa fa-pencil-square-o"></i> 251 reviews</button>
+                                                <button type="button" class="btn btn-primary btn-searchResultItemBook"><i class="fa fa-scissors" style="color:white"></i> Book Appointment!</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="row searchResultItem">
+                                            <div class="row searchResultItemInfoRow">
+                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 zeroPadding">
+                                                    <p class="zeroBottomMargin"><a class="searchResultItemName">Salon 1</a></p>
+                                                    <p class="zeroBottomMargin"><a class="searchResultItemArea"> Hindustan Park</a></p>
+                                                    <p class="zeroBottomMargin"><span class="searchResultItemAddress">18, Park Street Area, Kolkata</span></p>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 zeroPadding">
+                                                    <div class="row">
+                                                        <span class="label label-searchResultItemRating pull-right">3.9</span>
+                                                    </div>
+                                                    <div class="row">
+                                                        <span class="label label-searchResultItemRatingVotes pull-right">1217 votes</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row searchResultItemDetailInfoRow">
+                                                <p class="zeroBottomMargin searchResultItemDetails"><span class="itemTitle">Services: </span> Hair, Skin, Hands & Feet, Body</p>
+                                                <p class="zeroBottomMargin searchResultItemDetails"><span class="itemTitle">Category:  </span ><span class="tags"> Pocket-Friendly</span> </p>
+                                            </div>
+                                            <div class="searchResultItemLikeDetails">
+                                                <span class="searchResultItemLikeDetailsMain"><i class="fa fa-heart-o"></i> Derp Dutta</span> and 
+                                                <span class="searchResultItemLikeDetailsMain">4 others</span> like this
+                                            </div>
+                                            <div class="searchSalonImageContainer">
+                                                <div class="searchGalleryItem">
+                                                    <a href="#"><img src="img/salon4.jpg"/></a>
+                                                </div>
+                                                <div class="searchGalleryItem">
+                                                    <a href="#"><img src="img/salon4.jpg"/></a>
+                                                </div>
+                                                <div class="searchGalleryItem">
+                                                    <a href="#"><img src="img/salon4.jpg"/></a>
+                                                </div>
+                                            </div>
+                                            <div class="row searchResultItemMenuInfo">
+                                                <button type="button" class="btn btn-searchResultItemMenuInfo"><i class="fa fa-list-alt"></i> Menu</button>
+                                                <button type="button" class="btn btn-searchResultItemMenuInfo"><i class="fa fa-pencil-square-o"></i> 251 reviews</button>
+                                                <button type="button" class="btn btn-primary btn-searchResultItemBook"><i class="fa fa-scissors" style="color:white"></i> Book Appointment!</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div  class="pull-right" id="page-selection"></div>
+                                    </div>
+                                    <div class="salonMissingDiv">
+                                        <a class="salonMissingLink">Are we missing any salon / spa? Suggest a new place to include in Stylekaro.</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <div class="row mainHeader"> Exclusive Offers
+                                <hr>
+                                <div id="offersListDivNoScroll">
+                                    <div class="row offerListRow">
+                                        <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2">
+                                            <img src="img/salon3.jpg" alt="stylekaro" class="center-block offerBrandLogo">
+                                        </div>
+                                        <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10">
+                                            <div class="row">
+                                                <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10 zeroPadding">
+                                                    <p class="itemHeader">Offer1</p>
+                                                </div>
+                                                <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2 heartPadding">
+                                                    <img src="img/heart_empty.png" onmouseover="this.src = 'img/heart_full.png'" onmouseout="this.src = 'img/heart_empty.png'"alt="heart_empty" class="">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <p class="detailsHeader" >Get 30% discount on hair spa today!</p>
+                                            </div>
+                                            <div class="row ">
+                                                <button class="btn btn-danger pull-right offerButtonFont" type="button">
+                                                    Offer Details 
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row offerListRow">
+                                        <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2">
+                                            <img src="img/salon3.jpg" alt="stylekaro" class="offerBrandLogo center-block">
+                                        </div>
+                                        <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10">
+                                            <div class="row">
+                                                <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10 zeroPadding">
+                                                    <p class="itemHeader" >Offer1</p>
+                                                </div>
+                                                <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2 heartPadding">
+                                                    <img src="img/heart_empty.png" onmouseover="this.src = 'img/heart_full.png'" onmouseout="this.src = 'img/heart_empty.png'"alt="heart_empty" class="">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <p class="detailsHeader">Get 30% discount on hair spa today!</p>
+                                            </div>
+                                            <div class="row ">
+                                                <button class="btn btn-danger pull-right offerButtonFont" type="button">
+                                                    Offer Details 
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row offerListRow">
+                                        <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2">
+                                            <img src="img/salon3.jpg" alt="stylekaro" class="offerBrandLogo center-block">
+                                        </div>
+                                        <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10">
+                                            <div class="row">
+                                                <div class="col-xs-10  col-sm-10 col-md-10 col-lg-10 zeroPadding">
+                                                    <p class="itemHeader">Offer1</p>
+                                                </div>
+                                                <div class="col-xs-2  col-sm-2 col-md-2 col-lg-2 heartPadding">
+                                                    <img src="img/heart_empty.png" onmouseover="this.src = 'img/heart_full.png'" onmouseout="this.src = 'img/heart_empty.png'"alt="heart_empty" class="">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <p class="detailsHeader">Get 30% discount on hair spa today!</p>
+                                            </div>
+                                            <div class="row ">
+                                                <button class="btn btn-danger pull-right offerButtonFont" type="button">
+                                                    Offer Details 
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="scroll-top-wrapper ">
+                <span class="scroll-top-inner">
+                    <i class="fa fa-2x fa-arrow-circle-up"></i>
+                </span>
+            </div>
+        </div>
+        <script src="js/jquery-1.11.3.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+        <script src="js/search.js"></script>
+
+        <script src="js/common.js"></script>
+
+        <script src="js/searchSalon.js"></script>
+        
+        <script src="js/jquery.bootpag.min.js"></script>
+
+    </body>
+</html>

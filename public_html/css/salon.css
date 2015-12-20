@@ -232,7 +232,7 @@ and open the template in the editor.
 .galleryItem {
     color: #797478;
     font: 10px/1.5 Verdana, Helvetica, sans-serif;
-    float: left; 
+    float: left;
     width: 16%;
     margin:  2% 2% 0px 2%;
 }
