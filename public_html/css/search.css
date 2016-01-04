@@ -286,3 +286,192 @@ and open the template in the editor.
     text-decoration: underline;
     color: #cb202d;
 }
+
+.filterDiv{
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    border-right: 1px solid rgba(0,0,0,.05);
+    background-color: #fff;
+}
+
+.filterHeader{
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: -1px;
+    color: #5d5d5d;
+    text-shadow: 0 1px 1px #fff;
+    font-family: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+}
+
+.filterBody{
+    background: #f8f8f8;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.filterLabel{
+    padding-bottom: 5px!important;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    cursor: pointer;
+    color: #2d2d2d;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+    line-height: 16.8px;
+}
+
+.filterSelect{
+    color: #9a9a9a;
+    text-transform: capitalize;
+    line-height: 32px;
+    padding: 0 10px 0 0;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 0;
+    font-family: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+    height: 32px;
+    border: 1px solid #f0f0f0;
+    border-width: 1px 0;
+    overflow: hidden;
+}
+
+.clickable{
+    cursor: pointer;   
+}
+
+.filterPanel{
+    border-color: transparent;
+    margin-bottom: 0px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0;
+}
+
+.filterPanelHeading{
+    padding: 0px;
+    border-bottom: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.filterListGroup{
+    padding: 5px 10px 0 0;
+    background: transparent;
+    margin: 0;
+}
+
+.filterListGroupItem{
+    color: #3D3D39 !important;
+    display: block;
+    height: 17px;
+    font-size: 12px;
+    margin-bottom: 5px;
+    background: transparent;
+    list-style-type: none;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    padding: 0px;
+    border: none;
+    font-family: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+}
+
+.filterListGroupItem:hover{
+    background: transparent !important;
+    text-decoration: underline !important;
+}
+
+.filterRow{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.filterFormControl{
+    border: none;
+    color: #2d2d2d;
+    background: 0 0;
+    padding: 8px 0 6px;
+    width: 170px;
+    font-size: 14px;
+    text-transform: none;
+}
+
+.filterFormControl::-webkit-input-placeholder {
+    color: #9a9a9a !important;
+}
+
+.filterFormControl:-moz-placeholder { /* Firefox 18- */
+    color:  #9a9a9a !important;  
+}
+
+.filterFormControl::-moz-placeholder {  /* Firefox 19+ */
+    color:  #9a9a9a !important;  
+}
+
+.filterFormControl:-ms-input-placeholder {  
+    color:  #9a9a9a !important;  
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+    border:none;
+    box-shadow: none;
+    outline: 0 none;
+}
+
+.filterListGroupItemHeader{
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-family: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+    margin-bottom: 5px;
+    background: transparent;
+    list-style-type: none;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    padding: 0px;
+    border: none;
+    font-family: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+}
+
+.seeAllText{
+    font-size: 12px !important; 
+    cursor: pointer;
+    color: rgb(203, 32, 45)  !important;
+    display: block !important;
+}
+
+.seeAllText:hover{
+    text-decoration: underline !important;
+}
+
+.checkboxLabel{
+    color: #2d2d2d;
+    font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    font-size: 13.33px;
+}

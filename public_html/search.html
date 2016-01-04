@@ -20,6 +20,7 @@ and open the template in the editor.
         <link href="css/search.css" rel="stylesheet">
         <link href="css/common.css" rel="stylesheet">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
     </head>
     <body>
         <div id="wrapper">
@@ -130,8 +131,184 @@ and open the template in the editor.
                                 </ul>
                             </div>
                             <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 zeroPadding">
+                                    <div class="filterDiv">
+                                        <p class="filterHeader">Filters</p>
+                                        <div class="filterBody">
+                                            <div class="row filterRow">
+                                                <p class="filterLabel zeroBottomMargin"> sort by</p>
+                                                <div class="panel panel-default filterPanel">
+                                                    <div class="panel-heading filterPanelHeading">
+                                                        <h3 class="panel-title filterSelect">Popularity
+                                                            <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span></h3>
+                                                    </div>
+                                                    <div class="panel-body collapse" style="padding: 0px;">
+                                                        <div class="list-group filterListGroup">
+                                                            <a href="#" class="list-group-item filterListGroupItem">Popularity - high to low</a>
+                                                            <a href="#" class="list-group-item filterListGroupItem">Rating - high to low</a>
+                                                            <a href="#" class="list-group-item filterListGroupItem">Cost - high to low</a>
+                                                            <a href="#" class="list-group-item filterListGroupItem">Cost - low to high</a>
+                                                            <a href="#" class="list-group-item filterListGroupItem">Recently added</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
+                                            <div class="row filterRow">
+                                                <p class="filterLabel zeroBottomMargin">location</p>
+                                                <div class="panel panel-default filterPanel">
+                                                    <div class="panel-heading filterPanelHeading">
+                                                        <h3 class="panel-title filterSelect"><input type="text" class="filterFormControl filterSelect" id="filterLocation" placeholder="Type to filter">
+                                                            <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span></h3>
+                                                    </div>
+                                                    <div class="panel-body collapse" style="padding: 0px;">
+                                                        <div class="list-group filterListGroup">
+                                                            <span class="list-group-item filterListGroupItemHeader">Popular Locations</span>
+                                                            <a href="#" class="list-group-item filterListGroupItem">Sector 1, Salt Lake (16)</a>
+                                                            <a href="#" class="list-group-item filterListGroupItem">Bhawanipur (15)</a>
+                                                            <a href="#" class="list-group-item filterListGroupItem">Elgin (15)</a>
+                                                            <a href="#" class="list-group-item filterListGroupItem">New Market Area (12)</a>
+                                                            <a href="#" class="list-group-item filterListGroupItem">Rajarhat New Town (10)</a>
+                                                            <a href="#" class="list-group-item filterListGroupItem seeAllText">See all</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row filterRow">
+                                                <p class="filterLabel zeroBottomMargin">service</p>
+                                                <div class="panel panel-default filterPanel">
+                                                    <div class="panel-heading filterPanelHeading">
+                                                        <h3 class="panel-title filterSelect"><input type="text" class="filterFormControl filterSelect" id="filterLocation" placeholder="Type to filter">
+                                                            <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span></h3>
+                                                    </div>
+                                                    <div class="panel-body collapse" style="padding: 0px;">
+                                                        <div class="list-group filterListGroup">
+                                                            <span class="list-group-item filterListGroupItemHeader">Popular Services</span>
+                                                            <a href="#" class="list-group-item filterListGroupItem">Hair cut</a>
+                                                            <a href="#" class="list-group-item filterListGroupItem">Hair straightening</a>
+                                                            <a href="#" class="list-group-item filterListGroupItem">Manicure</a>
+                                                            <a href="#" class="list-group-item filterListGroupItem">Bleach</a>
+                                                            <a href="#" class="list-group-item filterListGroupItem">Body massage</a>
+                                                            <a href="#" class="list-group-item filterListGroupItem seeAllText">See all</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row filterRow">
+                                                <p class="filterLabel zeroBottomMargin">Category</p>
+                                                <div class="panel panel-default filterPanel">
+                                                    <div class="panel-heading filterPanelHeading">
+                                                        <h3 class="panel-title filterSelect"><input type="text" class="filterFormControl filterSelect" id="filterLocation" placeholder="Type to filter">
+                                                            <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span></h3>
+                                                    </div>
+                                                    <div class="panel-body collapse" style="padding: 0px;">
+                                                        <div class="list-group filterListGroup">
+                                                            <a href="#" class="list-group-item filterListGroupItem">Pocket - friendly (22)</a>
+                                                            <a href="#" class="list-group-item filterListGroupItem">Brand (34)</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row filterRow">
+                                                <p class="filterLabel zeroBottomMargin">Salon offers</p>
+                                                <form role="form">
+                                                    <div class="checkbox checkbox-success">
+                                                        <input type="checkbox" id="checkboxPromotions">
+                                                        <label for="checkboxPromotions">
+                                                            <span class="checkboxLabel">Promotions</span>
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            
+                                            <div class="row filterRow">
+                                                <p class="filterLabel zeroBottomMargin">More Filters</p>
+                                                <form role="form">
+                                                    <div class="checkbox checkbox-success">
+                                                        <input type="checkbox" id="checkboxOpenNow">
+                                                        <label for="checkboxOpenNow">
+                                                            <span class="checkboxLabel">Open Now <i class="fa fa-clock-o"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                                <form role="form">
+                                                    <div class="checkbox checkbox-success">
+                                                        <input type="checkbox" id="checkboxUnisex">
+                                                        <label for="checkboxUnisex">
+                                                            <span class="checkboxLabel">Unisex <i class="fa fa-venus-mars"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                                <form role="form">
+                                                    <div class="checkbox checkbox-success">
+                                                        <input type="checkbox" id="checkboxOnlineBooking">
+                                                        <label for="checkboxOnlineBooking">
+                                                            <span class="checkboxLabel">Online Bookings <i class="fa fa-desktop"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                                <form role="form">
+                                                    <div class="checkbox checkbox-success">
+                                                        <input type="checkbox" id="checkboxCardAccepted">
+                                                        <label for="checkboxCardAccepted">
+                                                            <span class="checkboxLabel">Cards Accepted <i class="fa fa-credit-card"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                                <form role="form">
+                                                    <div class="checkbox checkbox-success">
+                                                        <input type="checkbox" id="checkboxServiceTax">
+                                                        <label for="checkboxServiceTax">
+                                                            <span class="checkboxLabel">Service Tax <i class="fa fa-money"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                                <form role="form">
+                                                    <div class="checkbox checkbox-success">
+                                                        <input type="checkbox" id="checkboxParking">
+                                                        <label for="checkboxParking">
+                                                            <span class="checkboxLabel">Parking <i class="fa fa-car"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                                <form role="form">
+                                                    <div class="checkbox checkbox-success">
+                                                        <input type="checkbox" id="checkboxAC">
+                                                        <label for="checkboxAC">
+                                                            <span class="checkboxLabel">AC <i class="fa fa-tachometer"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                                <form role="form">
+                                                    <div class="checkbox checkbox-success">
+                                                        <input type="checkbox" id="checkboxHomeService">
+                                                        <label for="checkboxHomeService">
+                                                            <span class="checkboxLabel">Home Service <i class="fa fa-home"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                                <form role="form">
+                                                    <div class="checkbox checkbox-success">
+                                                        <input type="checkbox" id="checkboxWifi">
+                                                        <label for="checkboxWifi">
+                                                            <span class="checkboxLabel">Wifi <i class="fa fa-wifi"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                                <form role="form">
+                                                    <div class="checkbox checkbox-success">
+                                                        <input type="checkbox" id="checkboxBride">
+                                                        <label for="checkboxBride">
+                                                            <span class="checkboxLabel">Bridal Makeup </span>
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" style="background-color: white">
                                     <div class="searchMapContainer">
@@ -455,7 +632,7 @@ and open the template in the editor.
         <script src="js/common.js"></script>
 
         <script src="js/searchSalon.js"></script>
-        
+
         <script src="js/jquery.bootpag.min.js"></script>
 
     </body>
