@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>StyleKaro</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/user.css" rel="stylesheet">
+        <link href="css/common.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="overlay"></div>
+            <!--top Navbar-->
+            <nav class="navbar navbar-default customNavbar" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" style="padding: 0px;" href="#">
+                            <img alt="Stylekoro" src="img/logo.png" >
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav ">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle selectCityDD" data-toggle="dropdown">Select city <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Kolkata</a></li>
+                                    <li><a href="#">Delhi</a></li>
+                                    <li><a href="#">Mumbai</a></li>
+                                    <li><a href="#">Bangalore</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form" role="search">
+                            <div class="input-group" style="margin-left: 50px;">
+                                <input type="text" class="form-control pull-right searchForm" placeholder="Search">
+                                <span class="input-group-btn">
+                                    <button type="reset" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-remove">
+                                            <span class="sr-only">Close</span>
+                                        </span>
+                                    </button>
+                                    <button type="submit" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-search">
+                                            <span class="sr-only">Search</span>
+                                        </span>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+            <!--sidebar-->
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+                <ul class="nav sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a href="#">
+                            StyleKaro
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Salon</a>
+                    </li>
+                    <li>
+                        <a href="#">Offers</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="page-content-wrapper">
+                <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                    <span class="hamb-top"></span>
+                    <span class="hamb-middle"></span>
+                    <span class="hamb-bottom"></span>
+                </button>
+                <div class="container">
+                    <div class="row" style="background-color: #fff;margin-left: -10px;margin-right: -10px;">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 userInfoRow">
+                            <div class="row">
+                                <img src="img/dp.jpg" class="img-rounded" alt="profile picture" width="130" height="130"> 
+                            </div>
+                            <div class="userDetailsRow">
+                                <p class="userNameRow">Rakesh Tripathi</p>
+                                <p class="userIDRow">@SalonPsycho</p>
+                                <p class="userLocationRow"><i class="fa fa-location-arrow"></i>   Kolkata</p>
+                                <div class="userButtongroup">
+                                    <button type="button" class="btn btn-user"><i class="fa fa-cog"></i>  Settings</button>
+                                    <button type="button" class="btn btn-user"><i class="fa fa-plus-circle"></i>  Invite</button>
+                                </div>
+                            </div>
+                            <div class="userTabsRow">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li class="active"><a href="#"><i class="fa fa-pencil-square-o"></i>  Reviews(37)<i class="fa fa-angle-right pull-right"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-user"></i>  Followers(144)<i class="fa fa-angle-right pull-right"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-heart-o"></i>  Favorites(23)<i class="fa fa-angle-right pull-right"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-o"></i>  Ratings<i class="fa fa-angle-right pull-right"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-calendar-check-o"></i>  Appointment History<i class="fa fa-angle-right pull-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 userDetailsRow">
+                            <p class="userViewsStatLabel">reviews</p>
+                            <div class="row" id="userReviewsDiv">
+                                <div class="reviewItem">
+                                    <div class=" row reviewItemHeader">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a href="#"><img src="img/savatar1.png" class="img-responsive" style="width: 34px;height: 34px;"></a>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                            <div class="row">
+                                                <a class="reviewItemHeaderName" href="salon.html">Salon 1</a>
+                                            </div>
+                                            <div class="row">
+                                                <a class="reviewItemHeaderDetails"> Elgin, Kolkata</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <span class="btn btn-default"><i class="fa fa-heart-o"></i></span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row reviewItemBody">
+                                        <p class="reviewItemBodyDetails">
+                                            <span class="reviewItemBodyRatedLabel">Rated</span>
+                                            <span class="reviewItemBodyRating">4.0</span>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reviewItem">
+                                    <div class=" row reviewItemHeader">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a href="#"><img src="img/savatar1.png" class="img-responsive" style="width: 34px;height: 34px;"></a>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                            <div class="row">
+                                                <a class="reviewItemHeaderName" href="salon.html">Salon 1</a>
+                                            </div>
+                                            <div class="row">
+                                                <a class="reviewItemHeaderDetails"> Elgin, Kolkata</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <span class="btn btn-default"><i class="fa fa-heart-o"></i></span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row reviewItemBody">
+                                        <p class="reviewItemBodyDetails">
+                                            <span class="reviewItemBodyRatedLabel">Rated</span>
+                                            <span class="reviewItemBodyRating">4.0</span>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reviewItem">
+                                    <div class=" row reviewItemHeader">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a href="#"><img src="img/savatar1.png" class="img-responsive" style="width: 34px;height: 34px;"></a>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                            <div class="row">
+                                                <a class="reviewItemHeaderName" href="salon.html">Salon 1</a>
+                                            </div>
+                                            <div class="row">
+                                                <a class="reviewItemHeaderDetails"> Elgin, Kolkata</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <span class="btn btn-default"><i class="fa fa-heart-o"></i></span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row reviewItemBody">
+                                        <p class="reviewItemBodyDetails">
+                                            <span class="reviewItemBodyRatedLabel">Rated</span>
+                                            <span class="reviewItemBodyRating">4.0</span>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reviewItem">
+                                    <div class=" row reviewItemHeader">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a href="#"><img src="img/savatar1.png" class="img-responsive" style="width: 34px;height: 34px;"></a>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                            <div class="row">
+                                                <a class="reviewItemHeaderName" href="salon.html">Salon 1</a>
+                                            </div>
+                                            <div class="row">
+                                                <a class="reviewItemHeaderDetails"> Elgin, Kolkata</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <span class="btn btn-default"><i class="fa fa-heart-o"></i></span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row reviewItemBody">
+                                        <p class="reviewItemBodyDetails">
+                                            <span class="reviewItemBodyRatedLabel">Rated</span>
+                                            <span class="reviewItemBodyRating">4.0</span>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reviewItem">
+                                    <div class=" row reviewItemHeader">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a href="#"><img src="img/savatar1.png" class="img-responsive" style="width: 34px;height: 34px;"></a>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                            <div class="row">
+                                                <a class="reviewItemHeaderName" href="salon.html">Salon 1</a>
+                                            </div>
+                                            <div class="row">
+                                                <a class="reviewItemHeaderDetails"> Elgin, Kolkata</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <span class="btn btn-default"><i class="fa fa-heart-o"></i></span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row reviewItemBody">
+                                        <p class="reviewItemBodyDetails">
+                                            <span class="reviewItemBodyRatedLabel">Rated</span>
+                                            <span class="reviewItemBodyRating">4.0</span>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reviewItem">
+                                    <div class=" row reviewItemHeader">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a href="#"><img src="img/savatar1.png" class="img-responsive" style="width: 34px;height: 34px;"></a>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                            <div class="row">
+                                                <a class="reviewItemHeaderName" href="salon.html">Salon 1</a>
+                                            </div>
+                                            <div class="row">
+                                                <a class="reviewItemHeaderDetails"> Elgin, Kolkata</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <span class="btn btn-default"><i class="fa fa-heart-o"></i></span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row reviewItemBody">
+                                        <p class="reviewItemBodyDetails">
+                                            <span class="reviewItemBodyRatedLabel">Rated</span>
+                                            <span class="reviewItemBodyRating">4.0</span>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div  class="pull-right" id="page-selection"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 userStatsRow">
+                            <span class="label label-danger label-ranking"><span class="label-ranking-no">#1</span>  Salon Hopper</span>
+                            <div class="userViewsStat">
+                                <p class="userViewsStatLabel">TOTAL VIEWS FOR YOUR </p>
+                                <p class="userViewsReviewsLabel">reviews</p>
+                                <p class="userViewsReviewsLabel">298,486</p>
+                            </div>
+                            <div class="userSalonViews">
+                                <p class="userViewsStatLabel">recently viewed salons</p>
+                                <div id="recentlyViewedSalonDiv">
+                                    <div class="row recentlyViewedRow">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a><img class="img-rounded" src="img/thumb1.jpg" style="width: 34px;height: 34px;"></a>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                            <div class="row">
+                                                <p class="recentlyViewedSalonName">Salon 2</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="recentlyViewedSalonLocation">Rajarhat, Newtown, Kolkata</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <span class="label labelrecentlyViewedSalonRating">3.8</span>
+                                        </div>
+                                    </div>
+                                    <div class="row recentlyViewedRow">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a><img class="img-rounded" src="img/thumb1.jpg" style="width: 34px;height: 34px;"></a>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                            <div class="row">
+                                                <p class="recentlyViewedSalonName">Salon 2</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="recentlyViewedSalonLocation">Rajarhat, Newtown, Kolkata</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <span class="label labelrecentlyViewedSalonRating">3.8</span>
+                                        </div>
+                                    </div>
+                                    <div class="row recentlyViewedRow">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a><img class="img-rounded" src="img/thumb1.jpg" style="width: 34px;height: 34px;"></a>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                            <div class="row">
+                                                <p class="recentlyViewedSalonName">Salon 2</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="recentlyViewedSalonLocation">Rajarhat, Newtown, Kolkata</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <span class="label labelrecentlyViewedSalonRating">3.8</span>
+                                        </div>
+                                    </div>
+                                    <div class="row recentlyViewedRow">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a><img class="img-rounded" src="img/thumb1.jpg" style="width: 34px;height: 34px;"></a>
+                                        </div>
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                            <div class="row">
+                                                <p class="recentlyViewedSalonName">Salon 2</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="recentlyViewedSalonLocation">Rajarhat, Newtown, Kolkata</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <span class="label labelrecentlyViewedSalonRating">3.8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="userSuggestedFollower">
+                                <br/>
+                                <p class="userViewsStatLabel">Suggested hoppers to follow</p>
+                                <div id="hoppersToFollowDiv">
+                                    <div class="row hoppersToFollowRow">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a><img class="img-circle" src="img/thumb1.jpg" style="width: 38px;height: 38px;"></a>
+                                        </div>
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                                            <div class="row">
+                                                <p class="hoppersToFollowName">Derpina</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="hoppersToFollowDetails">68 reviews</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 zeroPadding">
+                                            <span class="btn btn-default"><i class="fa fa-user-plus"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="row hoppersToFollowRow">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a><img class="img-circle" src="img/thumb1.jpg" style="width: 38px;height: 38px;"></a>
+                                        </div>
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                                            <div class="row">
+                                                <p class="hoppersToFollowName">Derpina</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="hoppersToFollowDetails">68 reviews</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 zeroPadding">
+                                            <span class="btn btn-default"><i class="fa fa-user-plus"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="row hoppersToFollowRow">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a><img class="img-circle" src="img/thumb1.jpg" style="width: 38px;height: 38px;"></a>
+                                        </div>
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                                            <div class="row">
+                                                <p class="hoppersToFollowName">Derpina</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="hoppersToFollowDetails">68 reviews</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 zeroPadding">
+                                            <span class="btn btn-default"><i class="fa fa-user-plus"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="row hoppersToFollowRow">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a><img class="img-circle" src="img/thumb1.jpg" style="width: 38px;height: 38px;"></a>
+                                        </div>
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                                            <div class="row">
+                                                <p class="hoppersToFollowName">Derpina</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="hoppersToFollowDetails">68 reviews</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 zeroPadding">
+                                            <span class="btn btn-default"><i class="fa fa-user-plus"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="row hoppersToFollowRow">
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 zeroPadding">
+                                            <a><img class="img-circle" src="img/thumb1.jpg" style="width: 38px;height: 38px;"></a>
+                                        </div>
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                                            <div class="row">
+                                                <p class="hoppersToFollowName">Derpina</p>
+                                            </div>
+                                            <div class="row">
+                                                <p class="hoppersToFollowDetails">68 reviews</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 zeroPadding">
+                                            <span class="btn btn-default"><i class="fa fa-user-plus"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-top-wrapper ">
+                <span class="scroll-top-inner">
+                    <i class="fa fa-2x fa-arrow-circle-up"></i>
+                </span>
+            </div>
+        </div>
+
+        <script src="js/jquery-1.11.3.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/user.js"></script>
+
+        <script src="js/common.js"></script>
+
+        <script src="js/jquery.bootpag.min.js"></script>
+    </body>
+</html>
